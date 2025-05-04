@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Permasalahan Lingkungan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="body-bg">
+  <header>
+    <div class="dynamic-island">
+        <img src="icon.png" alt="icon" class="circle-icon">
+        <div class="island-content">
+          <buttona class="menu-button1" id="button">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+          </buttona>
+          <buttona class="menu-button" id="button1">
+            <span class="icon">⬅️</span>
+            <span class="label">PREV</span>
+          </buttona>
+          <buttona class="menu-button" id="button2">
+            <span class="icon">🏠</span>
+            <span class="label">HOME</span>
+          </buttona>
+          <buttona class="menu-button" id="button3">
+            <span class="icon">➡️</span>
+            <span class="label">NEXT</span>
+          </buttona>
+        </div>
+      </div>
+  </header>
+  <div class="main-container">
+    <!-- Kotak Judul -->
+    <div class="title-box">
+      <h1>Permasalahan Lingkungan</h1>
+    </div>
+
+    <!-- Kotak Konten (Masalah Lingkungan) -->
+    <div class="content-box">
+      <div class="container">
+        <div class="card">
+          <img src="banjir.png"
+               alt="Banjir"
+               onmouseover="changeBackground(this)"
+               onmouseout="resetBackground()" />
+          <div class="title">Banjir</div>
+          <div class="desc">
+            Banjir disebabkan oleh curah hujan tinggi, sistem drainase buruk, dan sampah menumpuk yang menghambat aliran air.
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="polusi.png"
+               alt="Polusi"
+               onmouseover="changeBackground(this)"
+               onmouseout="resetBackground()" />
+          <div class="title">Polusi</div>
+          <div class="desc">
+            Polusi udara dan air berasal dari kendaraan bermotor, pabrik, dan limbah rumah tangga yang tidak dikelola dengan baik.
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="hutan.png"
+               alt="Penebangan Hutan"
+               onmouseover="changeBackground(this)"
+               onmouseout="resetBackground()" />
+          <div class="title">Penebangan Hutan</div>
+          <div class="desc">
+            Penebangan liar menyebabkan kerusakan habitat, banjir, dan hilangnya keanekaragaman hayati.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuis Interaktif</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Kiri -->
+    <div class="siswa-list">
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 1</strong>
+          <small>Poin: <span id="poin-A">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('A')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 2</strong>
+          <small>Poin: <span id="poin-B">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('B')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 3</strong>
+          <small>Poin: <span id="poin-C">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('C')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 4</strong>
+          <small>Poin: <span id="poin-D">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('D')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 5</strong>
+          <small>Poin: <span id="poin-E">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('E')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 6</strong>
+          <small>Poin: <span id="poin-F">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('F')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 7</strong>
+          <small>Poin: <span id="poin-G">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('G')">+</button>
+      </div>
+    </div>
+
+    <!-- Tengah (Soal) -->
+    <div class="quiz-box">
+      <div class="question" id="question-text">Loading soal...</div>
+      <div class="choices" id="choice-buttons"></div>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Kanan -->
+    <div class="siswa-list">
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 8</strong>
+          <small>Poin: <span id="poin-H">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('H')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 9</strong>
+          <small>Poin: <span id="poin-I">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('I')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 10</strong>
+          <small>Poin: <span id="poin-J">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('J')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 11</strong>
+          <small>Poin: <span id="poin-K">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('K')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 12</strong>
+          <small>Poin: <span id="poin-L">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('L')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 13</strong>
+          <small>Poin: <span id="poin-M">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('M')">+</button>
+      </div>
+      <div class="siswa-card">
+        <div class="siswa-info">
+          <strong>Absen 14</strong>
+          <small>Poin: <span id="poin-N">0</span></small>
+        </div>
+        <button class="btn-plus" onclick="tambahPoin('N')">+</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
