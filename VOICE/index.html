@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECO VOICE ANSWER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow"></div>
+  <header>
+    <div class="dynamic-island">
+        <img src="icon.png" alt="icon" class="circle-icon">
+        <div class="island-content">
+          <buttona class="menu-button1" id="button">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+          </buttona>
+          <buttona class="menu-button" id="button1">
+            <span class="icon">⬅️</span>
+            <span class="label">PREV</span>
+          </buttona>
+          <buttona class="menu-button" id="button2">
+            <span class="icon">🏠</span>
+            <span class="label">HOME</span>
+          </buttona>
+          <buttona class="menu-button" id="button3">
+            <span class="icon">➡️</span>
+            <span class="label">NEXT</span>
+          </buttona>
+        </div>
+      </div>
+  </header>
+
+  <video autoplay mute loop id="videobackground">
+    <source src="" type="video/mp4"> Tidak support
+  </video>
+  <h1>Voice Answer</h1>
+  <h5>SISTEM TANYA JAWAB DENGAN SUARA</h5>
+  <div class="tombol">
+    <img id="start-btn" src="MIC.png" alt="aya uuungg" class="mic-btn">
+  </div>
+
+  <div class="input-container">
+    <input type="text" id="typed-question" placeholder="Ayo Bertanya!" /> 
+  </div>
+
+
+  <div class="jawaban">
+    <p id="question">PERTANYAAN : </p>
+    <p id="answer">JAWABAN: </p>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fast-levenshtein@2.0.6/levenshtein.js"></script>
+</body>
+</html>
