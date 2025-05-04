@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Sebab Akibat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="dynamic-island">
+            <img src="icon.png" alt="icon" class="circle-icon">
+            <div class="island-content">
+              <buttona class="menu-button1" id="button">
+                <span class="icon">🏠</span>
+                <span class="label">Home</span>
+              </buttona>
+              <buttona class="menu-button" id="button1">
+                <span class="icon">⬅️</span>
+                <span class="label">PREV</span>
+              </buttona>
+              <buttona class="menu-button" id="button2">
+                <span class="icon">🏠</span>
+                <span class="label">HOME</span>
+              </buttona>
+              <buttona class="menu-button" id="button3">
+                <span class="icon">➡️</span>
+                <span class="label">NEXT</span>
+              </buttona>
+            </div>
+          </div>
+    </header>
+    
+    <div id="container">
+        <!-- Kotak kanan untuk kategori dan tombol -->
+        <div id="kategori" class="card">
+            <h2 id="judul-kategori">SAMPAH</h2>
+            <img id="gambar-kategori" src="sampah.jpg" alt="Sampah" class="kategori-img">
+            <div id="tombol-tindakan">
+                <!-- Tombol tindakan akan di-generate oleh JS -->
+            </div>
+        </div>
+
+        <!-- Kotak kiri untuk akibat -->
+        <div id="akibat" class="card2">
+            <h3>AKIBAT</h3>
+            <div id="akibat-container">
+                <p>Pilih tindakan untuk melihat akibat.</p>
+            </div>
+        </div>
+    </div>
+    <div class="tombolnya">
+        <div id="navigasi">
+            <button onclick="pindahKategori('kiri')" class="nav-btn">⬅️</button>
+            <button onclick="pindahKategori('kanan')" class="nav-btn">➡️</button>
+        </div>    
+    </div>
+
+    <footer>
+        <p>EARTH HERO - RIKO FEBRI SETIAWAN</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+/* Gaya dasar */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+}
+
+/* NAVIGASI MENU */
+
+header {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 10%;
+    top: 10px;
+    padding: 10px;
+    z-index: 1;
+    
+}
+
+.dynamic-island {
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff34;
+    backdrop-filter: blur(10%);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .dynamic-island img.circle-icon {
+    width: 20px;
+    height: 20px;
+    transform: translateX(25px);
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .dynamic-island.expanded {
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    transform: translateX(-120px);
+  }
+  
+  .dynamic-island.expanded img.circle-icon {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .island-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .island-content .menu-button {
+    flex: 1;
+    height: 25px;
+    margin-left: 22px;
+    padding: 5px 10px;
+    background-color: #9c9b9b00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+  }
+
+  
+  .island-content .menu-button1 {
+    opacity: 0;
+  }
+  
+  .dynamic-island.expanded .menu-button {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-40px, 0);
+  }
+  
+  .dynamic-island:not(.expanded) .menu-button:nth-child(1) {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .dynamic-island.expanded .menu-button .label {
+    display: inline;
+    margin-left: 5px;
+  }
+  
+  .label {
+    display: none;
+  }
+  
+  .menu-button:hover {
+    background-color: #8de8ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-button:active {
+    transform: scale(0.95);
+  }
+  
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 800px;
+    gap: 15px;
+    opacity: 0;
+    transform: translate(300px, 80px);
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Animasi kategori */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Gaya kartu */
+.card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.card h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card2 {
+    position: relative;
+    margin-left: 500px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 300px;
+    max-width: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.kategori-img, .akibat-img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeInAkibat 1s ease-in-out;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.kategori-img:hover {
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.kategori-img:active {
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Container akibat */
+.akibat-container {
+    width: 100%;
+    opacity: 0;
+    animation: fadeInAkibat 1s forwards;
+}
+
+
+.akibat-card {
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInAkibat 1s forwards;
+}
+
+
+@keyframes fadeInAkibat {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.akibat-card.clicked {
+    transform: scale(1.9) translate(250px, -10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.akibat-card img {
+    width: 75%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+}
+
+
+.akibat-card p {
+    color: black;
+    font-size: 10px;
+    margin: 1px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Tombol */
+button {
+    background: linear-gradient(45deg, #6e8efb, #a777e3);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #a777e3, #6e8efb);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Animasi kategori */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Navigasi */
+#navigasi {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(320px, -100px);
+}
+
+.nav-btn {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #6e8efb;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-btn:hover {
+    background: #a777e3;
+    transform: scale(1.2);
+}
+
+.nav-btn:active {
+    transform: translateY(1px);
+}
+
+footer {
+    background: #f4f4f417;
+    backdrop-filter: blur(10px);
+    color: #4d4c4c;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
